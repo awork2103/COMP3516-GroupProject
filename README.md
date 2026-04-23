@@ -60,8 +60,10 @@ IMU: 64 frames
 
 ## How To Reproduce
 
+NOTE: All code is run and tested locally (not on Colab). dGPUs will automatically be used if detected. If not, the runtime will fallback to CPU usage.
+
 1. Open `instructions.ipynb`.
-2. Run the notebook cells from top to bottom.
+2. Run the notebook cells from top to bottom on *locally* machines
 3. Task 1 visualizes one IRA example per class and one CSI sample.
 4. The shared preprocessing cells load pickle files, clean metadata, align frames, and define CSV export helpers.
 5. Task 2 trains the three single-modality classifiers:
@@ -134,7 +136,3 @@ activity_IMU_labelled.csv
 ```
 
 These files are included for comparison with the multimodal result.
-
-## Notes
-
-The notebook is intended to be the single source of truth for preprocessing, model definitions, training, inference, and visualization. No separate training scripts are required.
